@@ -19,7 +19,7 @@ btn.addEventListener('click',(event)=>{
     loading.style.width="30%";
     p1.appendChild(loading);
 
-    fetch('http://localhost:3000/weather?address='+inp.value).then((response) => {
+    fetch('/weather?address='+inp.value).then((response) => {
         response.json().then((data1) => {
             if (data1.location==this.undefined) {
                 console.log(data1.error);
