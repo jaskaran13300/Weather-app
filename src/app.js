@@ -1,7 +1,7 @@
 const path=require('path');
 const geoFunc=require('./utils/geocode');
 const express=require('express');
-
+const port=process.env.PORT || 3000;
 const hbs=require('hbs');
 
 // Joining the paths
@@ -97,6 +97,6 @@ app.get('*',(req,res)=>{
     });
 })
 
-app.listen(3000,()=>{
-    console.log('Server is running on 3000');
+app.listen(port,()=>{
+    console.log('Server is running on '+port);
 })
